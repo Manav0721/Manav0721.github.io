@@ -1,0 +1,796 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ATS-Friendly: Hidden keywords section (visible to ATS, hidden from users) */
+.ats-keywords {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* Contact labels for ATS readability */
+.contact-label {
+    font-weight: 600;
+    margin-right: 3px;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 0.9em;
+}
+
+.contact-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-info i {
+    color: #ffd700;
+}
+
+/* LinkedIn and Email Link Styling */
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.contact-info a:hover {
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;
+}
+
+.contact-info a:active {
+    transform: scale(0.98);
+}
+
+/* Main Content - Fully Centered Layout */
+.main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+section h2 {
+    text-align: center;
+    color: #1e3c72;
+    font-size: 1.5em;
+    margin: 0 auto 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 3px solid #1e3c72;
+    padding-bottom: 10px;
+    font-weight: 700;
+    display: inline-block;
+    min-width: 300px;
+}
+
+/* Summary Section */
+.summary {
+    text-align: center;
+    padding: 30px 40px;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef, #f8f9fa);
+}
+
+.summary p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Skills Section - ATS Optimized */
+.skills {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.skill-category {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.skill-category h3 {
+    color: #2a5298;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 2px solid #2a5298;
+    padding-bottom: 8px;
+}
+
+.skill-category ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skill-category ul li {
+    padding: 8px 0;
+    color: #555;
+    text-align: center;
+    display: block;
+    line-height: 1.6;
+}
+
+.skill-category ul li:before {
+    content: "▸ ";
+    color: #2a5298;
+    font-weight: bold;
+}
+
+/* Education Section - ATS Enhanced */
+.education {
+    padding: 20px;
+    text-align: center;
+}
+
+.education-item {
+    text-align: center;
+    margin: 0 auto 25px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #1e3c72;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    max-width: 700px;
+}
+
+.education-item h3 {
+    color: #1e3c72;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.education-item .institution {
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.education-item .date {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.education-item .grade {
+    color: #2a5298;
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+}
+
+/* Professional Experience Section - ATS Optimized */
+.experience {
+    padding: 20px;
+    text-align: center;
+}
+
+.job {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 0 auto 20px;
+    border-left: 4px solid #2a5298;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    max-width: 700px;
+}
+
+.job-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.job-header h3 {
+    color: #1e3c72;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.job-header .company {
+    color: #2a5298;
+    font-size: 1em;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.job-header .date {
+    color: #777;
+    font-style: italic;
+    font-size: 0.95em;
+    text-align: center;
+}
+
+.job-description {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #555;
+}
+
+.job ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.job ul li {
+    padding: 8px 0;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    display: block;
+}
+
+.job ul li:before {
+    content: "● ";
+    color: #2a5298;
+}
+
+/* Projects Section - ATS Enhanced */
+.projects {
+    padding: 20px;
+    text-align: center;
+}
+
+.project {
+    background: #f8f9fa;
+    padding: 20px;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    border-left: 4px solid #1e3c72;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    max-width: 700px;
+}
+
+.project h3 {
+    color: #1e3c72;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.project .company {
+    color: #2a5298;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.project .date {
+    color: #777;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.project p {
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto 8px;
+}
+
+.project .tech {
+    color: #2a5298;
+    font-weight: 500;
+}
+
+.project .description {
+    color: #555;
+}
+
+/* Certifications Section */
+.certifications {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.certifications ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.certifications ul li {
+    padding: 12px 0;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    display: block;
+}
+
+.certifications ul li:before {
+    content: "✓ ";
+    color: #2a5298;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Download Section */
+.download-section {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef, #f8f9fa);
+}
+
+#downloadBtn {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+}
+
+#downloadBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 60, 114, 0.4);
+}
+
+#downloadBtn i {
+    margin-right: 8px;
+}
+
+/* ============================================ */
+/* RESPONSIVE DESIGN FOR ALL DEVICES */
+/* ============================================ */
+
+/* Large Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+        margin: 15px auto;
+    }
+
+    .header h1 {
+        font-size: 2.2em;
+        letter-spacing: 2px;
+    }
+
+    .main-content {
+        padding: 25px 30px;
+    }
+
+    section h2 {
+        font-size: 1.4em;
+    }
+}
+
+/* Tablets (481px - 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        margin: 10px auto;
+    }
+
+    .header {
+        padding: 30px 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+        letter-spacing: 1px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 0.85em;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    /* Skills stack vertically on tablets */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    section h2 {
+        font-size: 1.3em;
+        min-width: 200px;
+    }
+
+    .summary {
+        padding: 20px 15px;
+    }
+
+    .summary p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+
+    .education-item,
+    .job,
+    .project {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    #downloadBtn {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+}
+
+/* Mobile Devices (320px - 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container {
+        margin: 5px auto;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+        padding: 20px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+        letter-spacing: 0.5px;
+        margin-bottom: 15px;
+    }
+
+    .contact-info {
+        gap: 8px;
+        font-size: 0.8em;
+    }
+
+    .contact-info span {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    /* Make links more touch-friendly on mobile */
+    .contact-info a {
+        padding: 5px;
+        display: inline-block;
+    }
+
+    .main-content {
+        padding: 15px 10px;
+    }
+
+    section {
+        margin-bottom: 25px;
+    }
+
+    section h2 {
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        min-width: 150px;
+        border-bottom: 2px solid #1e3c72;
+        padding-bottom: 8px;
+    }
+
+    .summary {
+        padding: 15px 10px;
+    }
+
+    .summary p {
+        font-size: 0.95em;
+        line-height: 1.5;
+    }
+
+    .skills {
+        padding: 15px;
+    }
+
+    .skills-grid {
+        gap: 15px;
+    }
+
+    .skill-category {
+        padding: 15px;
+    }
+
+    .skill-category h3 {
+        font-size: 1em;
+    }
+
+    .skill-category ul li {
+        padding: 6px 0;
+        font-size: 0.9em;
+    }
+
+    .education,
+    .experience,
+    .projects {
+        padding: 10px;
+    }
+
+    .education-item {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .education-item h3 {
+        font-size: 1em;
+    }
+
+    .education-item .institution {
+        font-size: 0.9em;
+    }
+
+    .education-item .date,
+    .education-item .grade {
+        font-size: 0.85em;
+    }
+
+    .job {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .job-header h3 {
+        font-size: 1em;
+    }
+
+    .job-header .company,
+    .job-header .date {
+        font-size: 0.85em;
+    }
+
+    .job ul li {
+        padding: 6px 0;
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .project {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .project h3 {
+        font-size: 1em;
+    }
+
+    .project .company,
+    .project .date {
+        font-size: 0.85em;
+    }
+
+    .project p {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .certifications {
+        padding: 15px;
+    }
+
+    .certifications ul li {
+        padding: 8px 0;
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    .download-section {
+        padding: 20px 10px;
+    }
+
+    #downloadBtn {
+        padding: 10px 25px;
+        font-size: 0.9em;
+        width: 90%;
+        max-width: 250px;
+    }
+}
+
+/* Extra Small Devices (< 320px) */
+@media (max-width: 320px) {
+    .header h1 {
+        font-size: 1.3em;
+    }
+
+    .contact-info {
+        font-size: 0.75em;
+    }
+
+    section h2 {
+        font-size: 1em;
+        min-width: 120px;
+    }
+
+    .skill-category h3 {
+        font-size: 0.95em;
+    }
+}
+
+/* ============================================ */
+/* PRINT STYLES - ATS FRIENDLY */
+/* ============================================ */
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    .download-section {
+        display: none;
+    }
+
+    .header {
+        background: #1e3c72;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Ensure ATS can read links */
+    .contact-info a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    /* Show URLs in print for ATS */
+    .contact-info a[href^="mailto:"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+
+    .contact-info a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+
+    .skills,
+    .education-item,
+    .job,
+    .project,
+    .certifications {
+        page-break-inside: avoid;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+
+    /* Make hidden ATS keywords visible in print */
+    .ats-keywords {
+        position: static;
+        width: auto;
+        height: auto;
+        font-size: 0.1px;
+        color: transparent;
+    }
+}
+
+/* ============================================ */
+/* LANDSCAPE ORIENTATION FOR MOBILE */
+/* ============================================ */
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .main-content {
+        padding: 15px 20px;
+    }
+
+    section {
+        margin-bottom: 20px;
+    }
+}
